@@ -20,4 +20,3 @@ echo " Assignment has been updated to \"$new_assignment\" in config.env"
 # Running the  startup.sh from the $basedir
 echo " Running the reminder check with the new assignment*******"
 bash "$basedir/startup.sh"
-

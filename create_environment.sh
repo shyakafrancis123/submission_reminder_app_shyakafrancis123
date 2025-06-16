@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Ask for the username
 read -p "Kindly insert your name: " username
 
