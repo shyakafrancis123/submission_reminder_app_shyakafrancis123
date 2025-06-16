@@ -7,20 +7,17 @@ read -p "Kindly insert your name: " username
 basedir="submission_reminder_${username}"
 
 # Making the directories and arranging the tree
-mkdir -p "$basedir/config"
-mkdir -p "$basedir/modules"
-mkdir -p "$basedir/app"
-mkdir -p "$basedir/assets"
+mkdir -p "$basedir"/{config,modules,app,assets}
 
 # Creating the subfiles
-cat <<EOF > "$basedir/config/config.env"
+cat > "$basedir/config/config.env" << 'EOF'
 # This is the config file
 ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
 EOF
 
 # Create and populate functions.sh
-cat <<'EOF' > "$basedir/modules/functions.sh"
+cat > "$basedir/modules/functions.sh" << 'EOF'
 #!/bin/bash
 # Function to read submissions file and output students who have not submitted
 function check_submissions {
@@ -43,7 +40,7 @@ function check_submissions {
 EOF
 
 # Populate reminder.sh
-cat <<'EOF' > "$basedir/app/reminder.sh"
+cat > "$basedir/app/reminder.sh" << 'EOF'
 #!/bin/bash
 
 # Source environment variables and helper functions
@@ -62,7 +59,7 @@ check_submissions $submissions_file
 EOF
 
 # Populate startup.sh
-cat <<'EOF' > "$basedir/startup.sh"
+cat > "$basedir/startup.sh" << 'EOF'
 #!/bin/bash
 cd "$(dirname "$0")"
 
@@ -76,7 +73,7 @@ check_submissions $submissions_file
 EOF
 
 # Populate submissions.txt with original + 5 more students
-cat <<EOF > "$basedir/assets/submissions.txt"
+cat > "$basedir/assets/submissions.txt" << 'EOF'
 student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
