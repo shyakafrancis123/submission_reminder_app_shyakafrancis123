@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Asking the user for a new assignment name
-read -p "Kindly input the new assignment name: " new_assignment
+# Prompt the user for a new assignment name
+read -p "Enter the new assignment name: " new_assignment
 
-# Finding the base directory (e.g., $basedir)
+# Find the correct base directory (e.g., submission_reminder_Meghan)
 basedir=$(find . -maxdepth 1 -type d -name "submission_reminder_*" | head -n 1)
 
 # Ensure the directory exists
@@ -12,11 +12,12 @@ if [[ ! -d "$basedir" ]]; then
     exit 1
 fi
 
-# Updating the ASSIGNMENT in config.env
+# Update ASSIGNMENT in config.env
 sed -i "s/^ASSIGNMENT=.*/ASSIGNMENT=\"$new_assignment\"/" "$basedir/config/config.env"
 
-echo " Assignment has been updated to \"$new_assignment\" in config.env"
+echo " Assignment updated to \"$new_assignment\" in config.env"
 
-# Running the  startup.sh from the $basedir
-echo " Running the reminder check with the new assignment*******"
+# Run startup.sh from the base directory
+echo " Running the reminder check with the new assignment..."
 bash "$basedir/startup.sh"
+
