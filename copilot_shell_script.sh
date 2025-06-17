@@ -6,7 +6,7 @@ read -p "Enter the new assignment name: " new_assignment
 # Find the correct base directory (e.g., submission_reminder_Meghan)
 basedir=$(find . -maxdepth 1 -type d -name "submission_reminder_*" | head -n 1)
 
-# Ensure the directory exists
+# Ensure the directory existsMore actions
 if [[ ! -d "$basedir" ]]; then
     echo " Error **** Didnt find the submission_reminder_ directory."
     exit 1
