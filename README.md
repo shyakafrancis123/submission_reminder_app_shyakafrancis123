@@ -26,8 +26,7 @@ The submission Remainder App has been designed to aid users mange and keep trace
     ./copilot_shell_script.sh
 
 5.Remainder apk
-    After running the ./create_environment, enter the directory that was created and run the startup.sh script and this will askk if u to input the other subject u want to know if they were not submitted.
-
+    After running the ./create_environment, enter the directory that was created and run the startup.sh script. This will askk u to input the other subject inorder to see other student that did not submit.
 
 ## Usage
 - Use the `copilot_shell_script.sh` script to manage your reminders.
