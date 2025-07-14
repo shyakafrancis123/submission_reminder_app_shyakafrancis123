@@ -6,7 +6,7 @@ The submission Remainder App has been designed to aid users mange and keep trace
 ##Features
 -It has an automated scheduling of remainders for submissions
 -It can also send notifications to keep users updated 
--It is also easy to sestup andd sun with simple shell scripts
+-It is also easy to setup and  runs with simple shell scripts
 -It also has an organised project structure for easy maintenance and extension
 
 ## Installation
@@ -25,10 +25,12 @@ The submission Remainder App has been designed to aid users mange and keep trace
 4. Start the reminder service:
     ./copilot_shell_script.sh
 
+5.Remainder apk
+    After running the ./create_environment, enter the directory that was created and run the startup.sh script and this will askk if u to input the other subject u want to know if they were not submitted.
+
 
 ## Usage
 - Use the `copilot_shell_script.sh` script to manage your reminders.
 - Add your submissions and deadlines into the appropriate files or configuration as instructed in the project docs (you can expand this section as you add more features).
 
 ##This for purposes of studying only 
-
